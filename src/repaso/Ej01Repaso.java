@@ -14,7 +14,7 @@ public class Ej01Repaso {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         Proyecto P = new Proyecto ("Proyecto de Prueba", 1, "Coco Director");
         
         Investigador I1 = new Investigador("Coco", 1, "programacion");

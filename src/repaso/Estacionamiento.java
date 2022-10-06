@@ -118,7 +118,7 @@ public class Estacionamiento {
                 }
             }
             if (!encontre) {
-                posPiso++;
+                posPiso++; 
             }
         }
         String msj = "";

@@ -23,7 +23,7 @@ public class Subsidio {
     
     //GETTERS
     public double getMonto() {
-        return monto;
+        return monto; 
     }
 
     public String getMotivo() {
