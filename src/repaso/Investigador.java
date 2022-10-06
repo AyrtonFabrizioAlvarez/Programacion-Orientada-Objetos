@@ -85,6 +85,6 @@ public class Investigador {
         return "Nombre: " + this.nombre + "\n" + 
                "Categoria: " + this.categoria + "\n" + 
                "Especialidad: " + this.especialidad + "\n" + 
-               "Total en Subsidios " + this.calcularTotalSubsidios();
+               "Total en Subsidios " + this.calcularTotalSubsidios() + "\n";
     }
 }

@@ -94,7 +94,7 @@ public class Proyecto {
         String msjDefinitivo = "Nombre del Proyecto: " + this.nombre + "\n" + 
                             "Codigo: " + this.codigo + "\n" + 
                             "Nombre del Director: " + this.nombreDirector + "\n" +
-                            "Total subsidios del Proyecto: " + this.dineroTotalOtorgado() + "\n" + 
+                            "Total subsidios del Proyecto: " + this.dineroTotalOtorgado() + "\n\n" + 
                             msj;
         return msjDefinitivo;    
     }
