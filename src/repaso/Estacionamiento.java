@@ -62,10 +62,6 @@ public class Estacionamiento {
     public int getPlaza() {
         return plaza;
     }
-
-    public Auto[][] getMatriz() {
-        return matriz;
-    }
     
     //SETTERS
 
