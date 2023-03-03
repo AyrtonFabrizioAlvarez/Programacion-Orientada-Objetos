@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package tema1;
-import PaqueteLectura.Lector;
 import PaqueteLectura.GeneradorAleatorio;
+import PaqueteLectura.Lector;
 /**
  *
  * @author Coco
@@ -18,27 +18,25 @@ public class Ej04Matrices {
     public static void main(String[] args) {
         GeneradorAleatorio.iniciar();
         
-        int edificio [][];
-        edificio = new int[8][4];
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 4; j++) {
-                edificio[i][j] = 0;
-            }
-        }
         
-        int piso,oficina;
-        piso = Lector.leerInt();
-        while (piso != 9){
-            oficina = GeneradorAleatorio.generarInt(4);//Lector.leerInt();
-            edificio[piso][oficina] = edificio[piso][oficina] + 1;
+        int piso = Lector.leerInt();
+        int oficina = GeneradorAleatorio.generarInt(4)+1;
+        int [][] matriz = new int[8][4];
+        while (piso != 9)  {
+            matriz[piso-1][oficina-1] = matriz[piso-1][oficina-1] + 1;
             piso = Lector.leerInt();
+            oficina = GeneradorAleatorio.generarInt(4)+1;
         }
         
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 4; j++) {
-                System.out.println("En el piso " + i + " en la oficina " + j + " asistieron " + edificio[i][j] + " personas");
+        for (int k = 0; k < 8; k++) {
+            System.out.println("Piso " + (k+1));
+            for (int l = 0; l < 4; l++) {
+                System.out.print("Oficina " + (l+1) + " [" + matriz[k][l] + "]");
             }
+            System.out.println("\n");
         }
+        
+
         
     }
     

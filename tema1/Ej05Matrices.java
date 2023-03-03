@@ -15,36 +15,31 @@ public class Ej05Matrices {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int puntajes [][];
-        int x = 5, y = 4;
-        puntajes = new int[x][y];
-        
+        GeneradorAleatorio.iniciar();
+        int[][] puntaje = new int[5][4];
         int atencion, calidad, precio, ambiente;
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
-               puntajes[i][j] =  GeneradorAleatorio.generarInt(10) + 1;
-            }    
-        }
         
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
-                System.out.print(puntajes[i][j] + " ");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 4; j++) {
+                puntaje[i][j] = GeneradorAleatorio.generarInt(10)+1;
             }
-            System.out.println(" ");
         }
         
-        double [] promedios = new double[y];
-        double total = 0;
-        for (int i = 0; i < y; i++) {
-            for (int j = 0; j < x; j++) {
-                total = total + puntajes[j][i];
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print("[" + puntaje[i][j] + "] ");
             }
-            promedios[i] = total / 5;
-            total = 0;
+            System.out.println("\n");
         }
         
+        double x = 0;
+        double promedio = 0;
         for (int i = 0; i < 4; i++) {
-            System.out.println("aspecto " + i + " promedio: " + promedios[i]);
+            for (int j = 0; j < 5; j++) {
+                x = x + puntaje[j][i];
+            }
+            promedio = x/5;
+            System.out.println("Aspecto " + (i+1) + ": " + promedio);
         }
     }
     

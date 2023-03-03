@@ -8,12 +8,13 @@ public class Ej01Tabla2 {
      * @param args
      */
     public static void main(String[] args) {
+        GeneradorAleatorio.iniciar();
         int DF=11;  
         int [] tabla2 = new int[DF]; // indices de 0 a 10
         int i;
         for (i=0;i<DF;i++)
             tabla2[i]=2*i;
-        System.out.println("2x" + "6" + "="+ tabla2[6]);
+        System.out.println("2 x " + "6" + " = " + tabla2[6]);
         
         int j = GeneradorAleatorio.generarInt(12);
         while (j != 11){
