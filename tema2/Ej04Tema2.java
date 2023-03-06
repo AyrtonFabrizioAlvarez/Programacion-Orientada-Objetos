@@ -19,55 +19,43 @@ public class Ej04Tema2 {
         GeneradorAleatorio.iniciar();
         int x = 5;
         int y = 8;
-        Persona [][]casting = new Persona[x][y];
+        Persona [][] matriz = new Persona[x][y];
         
-        int [] vectorDimL = new int[x];
-        for (int i = 0; i < x; i++) {
-            vectorDimL[i] = 0;
-        }
+        String nombre;
+        int edad, dni;
+        int fil = 0;
+        int col;
         
-        int fi = 0;
-        int col = 0;
-        boolean corte = false;
+        nombre = Lector.leerString();
         
-        while ( (fi < x) && (!corte) ) {
+        while ( (fil < 5) && (!nombre.equals("zzz")) ) {
             col = 0;
-            while  ( (col < y) && (!corte) ) {
-                Persona P = new Persona();
-                System.out.println("Ingrese un nombre (condicion de corte)");
-                P.setNombre(Lector.leerString());//GeneradorAleatorio.generarString(6));
-                P.setDNI(GeneradorAleatorio.generarInt(255)+38000000);
-                P.setEdad(GeneradorAleatorio.generarInt(81));
+            while ( (col < 8) && (!nombre.equals("zzz")) ) {
+                edad = GeneradorAleatorio.generarInt(81);
+                dni = GeneradorAleatorio.generarInt(101);
                 
-                if (!P.getNombre().equals("zzz")){
-                    casting[fi][col] = P;
-                    col++;
-                }
-                else {
-                    corte = true;
-                }
-           }
-           vectorDimL[fi] = col;
-           if (!corte) {
-               fi++;
-           }
+                Persona P = new Persona();
+                P.setNombre(nombre);
+                P.setDNI(dni);
+                P.setEdad(edad);
+                
+                matriz[fil][col] = P;
+                col++;
+                nombre = Lector.leerString();
+            }
+            fil++;
         }
         
-        System.out.println("filas " + fi + " columnas " + col);
-        for (int i = 0; i < x; i++) {
-            System.out.println("en la posicion " + i + " el vector(dimL) tiene " + vectorDimL[i] + " objetos");
-        }
-        
-        for (int i = 0; i <= fi; i++) {
-            System.out.println("Dia " + i);
-            int pos = 0;
-            int dimL = vectorDimL[i];
-            while (pos != dimL) {
-                System.out.println("Entrevista " + pos + ", Persona a entrevistar: " + casting[i][pos].getNombre());
-                pos++;
+        for (int i = 0; i < 5; i++) {
+            if (matriz[i][0] != null) {
+                System.out.println("Dia: " + (i+1) + "\n");
+            }
+            for (int j = 0; j < 8; j++) {
+                if (matriz[i][j] != null) {
+                    System.out.println("Turno " + (j+1) + "\n" + matriz[i][j].toString() + "\n");
+                }
             }
         }
     }
-    
 }
 

@@ -56,32 +56,27 @@ public class Partido {
         golesVisitante = unosGoles;
     }
     
-    public boolean hayGanador(){
-         return (golesLocal!=golesVisitante); 
-    }
-    
-    public boolean hayEmpate(){
-         return ((golesLocal==golesVisitante));
+    public boolean hayGanador (){
+        return (this.golesLocal != this.golesVisitante);
     }
     
     public String getGanador(){
-         String ganador=new String();
-         if (golesLocal>golesVisitante){
-             ganador = local;
-         }
-         else {
-             if (golesLocal<golesVisitante){
-                 ganador = visitante;
-             }
-         }
-         return ganador;
-                 
-    }	    
-    
-    public String toString(){
-        String mensaje;
-        mensaje = local.toUpperCase() + "   " +  golesLocal + "   VS   " + visitante.toUpperCase() + "   " + golesVisitante;
-        return mensaje;
+        String ganador = new String();
+        if (this.golesVisitante > this.golesLocal) {
+            ganador = this.visitante;
+        }
+        else 
+            if (this.golesLocal > this.golesVisitante){
+                ganador = this.local;
+            }
+        return ganador;
     }
     
+    public boolean hayEmpate(){
+        return (this.golesLocal == this.golesVisitante);
+    }
+    
+    public String toString(){
+        return "{" + this.local.toUpperCase() + " " + this.golesLocal + " VS " + this.visitante.toUpperCase() + " " + this.golesVisitante + "}";
+    }
 }

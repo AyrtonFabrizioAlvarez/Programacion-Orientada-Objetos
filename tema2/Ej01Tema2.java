@@ -16,25 +16,22 @@ public class Ej01Tema2 {
      */
     public static void main(String[] args) {
         
-       Persona p1 = new Persona();
-       String nombre;
-       int dni, edad;
-       
        System.out.println("Ingrese su Nombre");
-       nombre = Lector.leerString();
-       p1.setNombre(nombre);
+       String nombre = Lector.leerString();
+
+       System.out.println("Ingrese su Dni");
+       int dni = Lector.leerInt();
        
-       System.out.println("Ingrese su dni");
-       dni = Lector.leerInt();
-       p1.setDNI(dni);
+       System.out.println("Ingrese su Edad");
+       int edad = Lector.leerInt();
+
+       Persona P = new Persona();
+       P.setNombre(nombre);
+       P.setDNI(dni);
+       P.setEdad(edad);
        
-       System.out.println("Ingrese su edad");
-       edad = Lector.leerInt();
-       p1.setEdad(edad);
        
-       System.out.println(p1.toString());
-       
-        
+       System.out.println(P.toString());
     }
     
 }

@@ -19,39 +19,43 @@ public class Ej02Tema2 {
         int dimF = 15;
         int dimL = 0;
         Persona [] vector = new Persona[dimF];
-        
-         int edad = GeneradorAleatorio.generarInt(81);
-         while ( (edad != 0) && (dimL < dimF) ) {
+     
+        String nombre;
+        int dni;
+        int edad = GeneradorAleatorio.generarInt(81);
+        while ((dimL < 15) && (edad != 0)) {
+            nombre = GeneradorAleatorio.generarString(10);
+            dni = GeneradorAleatorio.generarInt(101);
             Persona P = new Persona();
+            P.setNombre(nombre);
+            P.setDNI(dni);
             P.setEdad(edad);
-            P.setNombre(GeneradorAleatorio.generarString(6));
-            P.setDNI(GeneradorAleatorio.generarInt(200));
+            
             vector[dimL] = P;
-
             dimL++;
             
             edad = GeneradorAleatorio.generarInt(81);
         }
-
-         
-         int cant = 0;
-         for (int i = 0; i < dimL; i++) {
-             System.out.println(vector[i].toString());
-             if (vector[i].getEdad() > 65) {
-                cant = cant + 1; 
-             }
-        }
-         System.out.println("La cantidad de personas mayores de 65 años son: " + cant);
-         
-         int min = 999;
-         int pos = 0;
-         for (int i = 0; i < dimL; i++) {
-            if (vector[i].getDNI() < min) {
-                min = vector[i].getDNI();
-                pos = i;
+        
+        int cant = 0;
+        for (int i = 0; i < dimL; i++) {
+            System.out.println(i);
+            System.out.println(vector[i].toString() + "\n");
+            if (vector[i].getEdad() > 65) {
+                cant++;
             }
         }
-         System.out.println(vector[pos]);
+        System.out.println("Las personas mayores de 65 son: " + cant);
+
+       int min = 999;
+       int pos = -1;
+       for (int i = 0; i < dimL; i++) {
+           if (vector[i].getDNI() < min) {
+               min = vector[i].getDNI();
+               pos = i;
+           }
+       }
+        System.out.println("La persona con menor dni es: " + vector[pos].toString());
     }
     
 }

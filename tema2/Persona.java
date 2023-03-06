@@ -12,13 +12,20 @@ public class Persona {
     private int edad; 
     
     public Persona(String unNombre, int unDNI, int unaEdad){
-        nombre = unNombre;
-        DNI = unDNI;
-        edad = unaEdad; 
+        unNombre = nombre;
+        unDNI = DNI;
+        unaEdad = edad;
+    }
+
+    public Persona() {
     }
     
-    public Persona(){
-     
+    
+    
+    //GETTERS
+    
+    public String getNombre() {
+        return nombre;
     }
 
     public int getDNI() {
@@ -28,30 +35,27 @@ public class Persona {
     public int getEdad() {
         return edad;
     }
+    
+    //SETTERS
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setDNI(int unDNI) {
-        DNI = unDNI;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setEdad(int unaEdad) {
-        edad = unaEdad;
+    public void setDNI(int DNI) {
+        this.DNI = DNI;
     }
 
-    public void setNombre(String unNombre) {
-        nombre = unNombre;
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
     
-    public String toString(){
-        String aux; 
-        aux = "Mi nombre es " + nombre + ", mi DNI es " + DNI + " y tengo " + edad + " años.";
-        return aux;
+    //TOSTRING
+    
+    public String toString (){
+        return "Mi nombre es: " + this.nombre + "\n" + 
+               "DNI: " + this.DNI + "\n" + 
+               "Edad: " + this.edad;
     }
-    
-    
-    
-    
+ 
 }
