@@ -23,8 +23,8 @@ public class Demo01ConstructoresLibro {
         Libro libro2= new Libro("Learning Java by Building Android Games",  
                               "CreateSpace Independent Publishing", 
                                autor2, "978-1512108347");//PASO EL OBJETO AUTOR2 COMO PARAMETRO AL CONSTRUCTOR LIBRO
-        System.out.println(libro1.toString());
-        System.out.println(libro2.toString());
+        System.out.println(libro1.toString() + "\n");
+        System.out.println(libro2.toString() + "\n");
         System.out.println("Precio del libro2: " +libro2.getPrecio());
         System.out.println("Año edición del libro2: " +libro2.getAñoEdicion());
         
