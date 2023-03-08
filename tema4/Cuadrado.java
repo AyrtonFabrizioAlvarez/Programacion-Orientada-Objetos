@@ -7,7 +7,7 @@ public class Cuadrado extends Figura{
     
     public Cuadrado(double unLado, String unColorR, String unColorL){
         super(unColorR,unColorL);
-        setLado(unLado);
+        this.lado = unLado;
 
     } 
     

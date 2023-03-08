@@ -41,10 +41,6 @@ public class Hotel {
     
     //GETTERS
     
-    public Habitacion [] getVectorHabitaciones(){//ESTO GENERA LA DUDA DE SI ESTA BIEN EL EJERCICIO, YA QUE NO USO ESTO Y TENGO UN VECTOR
-        return this.vectorHotel;                      //DECLARADO EN EL MAIN.
-    }
-    
     public boolean estaOcupado(int pos) {
         return this.vectorHotel[pos].getOcupada();
     }

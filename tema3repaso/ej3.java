@@ -16,7 +16,7 @@ public class ej3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Estante E = new Estante(20);
+        Estante E = new Estante(5);
         
         System.out.println("Ingrese el nombre del autor(condicion de corte)");
         String nombre = Lector.leerString();
