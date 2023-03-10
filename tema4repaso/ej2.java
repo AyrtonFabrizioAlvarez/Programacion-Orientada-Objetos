@@ -3,22 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tema4;
-
+package tema4repaso;
+import PaqueteLectura.GeneradorAleatorio;
 /**
  *
  * @author Coco
  */
-public class Ej02Tema4 {
+public class ej2 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Jugador J = new Jugador(10, 5, "cocoJ", 1000, 28);
-        System.out.println(J.toString());
-        
-        Entrenador E = new Entrenador(11, "cocoE", 1000, 1);
+        Jugador J = new Jugador("Ayrton", 1000, 5, 2, 1);
+        Entrenador E = new Entrenador("Ivo", 1000, 1, 0);
         System.out.println(E.toString());
     }
     

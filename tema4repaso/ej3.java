@@ -3,23 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tema4;
+package tema4repaso;
 
 /**
  *
  * @author Coco
  */
-public class Ej02Tema4 {
+public class ej3 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Jugador J = new Jugador(10, 5, "cocoJ", 1000, 28);
-        System.out.println(J.toString());
+        Persona P = new Persona("Ivo", 36318865, 31);
+        Trabajador T = new Trabajador("Ayrton", 38045251, 29, "Programador");
         
-        Entrenador E = new Entrenador(11, "cocoE", 1000, 1);
-        System.out.println(E.toString());
+        System.out.println(P.toString() + "\n");
+        System.out.println(T.toString());
+        
     }
     
 }
