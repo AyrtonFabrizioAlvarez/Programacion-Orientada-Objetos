@@ -1,0 +1,128 @@
+OBJETO
+
+• Objeto: abstracción de un objeto del mundo real, definiendo qué lo caracteriza
+(estado interno) y qué acciones sabe realizar (comportamiento).
+
+• Estado interno: compuesto por
+datos/atributos que caracterizan al objeto y
+relaciones con otros objetos con los cuales
+colabora. Se implementan a través de
+variables de instancia.
+
+• Comportamiento: acciones o servicios a los
+que sabe responder el objeto. Se
+implementan a través de métodos de
+instancia que operan sobre el estado interno.
+Los servicios que ofrece al exterior
+constituyen la interfaz
+
+Envío de Mensaje: provoca la ejecución del
+método indicado por el nombre del mensaje.
+• Puede llevar datos (parámetros del método)
+• Puede devolver un dato (resultado del método)
+
+
+CLASE
+
+• Una clase describe un conjunto de
+objetos comunes (mismo tipo).
+Consta de:
+• La declaración de las v.i. que implementan
+el estado del objeto.
+• La codificación de los métodos que
+implementan su comportamiento.
+• Un objeto se crea a partir de una
+clase (el objeto es instancia de una
+clase)
+
+• La instanciación se realiza enviando
+un mensaje de creación a la clase.
+• Reserva de espacio para el objeto.
+• Ejecución el código inicializador o
+constructor
+• Devuelve la referencia al objeto.
+• Asociar la referencia a una variable (a
+través de ella podemos enviarle
+mensajes al objeto).
+
+
+PROGRAMAS
+
+• Los programas se organizan como una colección de objetos
+que cooperan entre sí enviándose mensajes.
+• Cada objeto es instancia de una clase.
+
+
+HERENCIA
+
+¿Qué es la Herencia?
+Es un mecanismo que permite que una clase herede características y
+comportamiento (atributos y métodos) de otra clase (clase padre o
+superclase). A su vez, la clase hija define sus propias características y
+comportamiento.
+Ventaja: reutilización de código
+
+
+CLASE ABSTRACTA
+
+¿Qué es un Clase abstracta?
+Una clase abstracta es una clase que no puede ser instanciada (no se pueden
+crear objetos de esta clase). Define características y comportamiento común
+para un conjunto de clases (subclases). Puede definir métodos abstractos (sin
+implementación) que deben ser implementados por las subclases.
+Taller de Programación - Módulo POO 16
+Los métodos abstractos son métodos para los cuales se define su encabezado pero no se
+los implementa. Las clases que hereden de una superclase abstracta deberán implementar
+sus métodos abstractos.
+Ejemplo:
+Para la clase abstracta Figura podemos declarar los métodos calcularArea y calcularPerimetro como
+métodos abstractos. Las clases Triángulo, Cuadrado y Círculo deberán implementar estos métodos.
+
+
+ENCAPSULAMIENTO
+
+Encapsulamiento
+Permite construir componentes autónomos de software, es decir
+independientes de los demás componentes.
+La independencia se logra ocultando detalles internos (implementación) de
+cada componente.
+Una vez encapsulado, el componente se puede ver como una caja negra de la
+cual sólo se conoce su interfaz.
+
+
+HERENCIA
+
+Herencia
+Permite definir una nueva clase en términos de una clase
+existente.
+La nueva clase hereda automáticamente todos los atributos y
+métodos de la clase existente, y a su vez puede definir
+atributos y métodos propios
+
+
+POLIMORFISMO
+
+Polimorfismo
+Objetos de clases distintas pueden responder a mensajes con nombre
+(selector) sintácticamente idénticos. Esto permite realizar código genérico,
+altamente reusable.
+
+
+BINDING DINAMICO
+
+Binding dinámico
+Mecanismo por el cual se determina en tiempo de ejecución el método (código)
+a ejecutar para responder a un mensaje
+
+
+BENEFICIOS
+
+Entre los beneficios de la POO, podemos mencionar producir SW que sea:
+• Natural. El programa queda expresado usando términos del problema a resolver, haciendo que
+sea más fácil de comprender.
+• Fiable. La POO facilita la etapa de prueba del SW. Cada clase se puede probar y validar
+independientemente.
+• Reusable. Las clases implementadas pueden reusarse en distintos programas. Además gracias a
+la herencia podemos reutilizar el código de una clase para generar una nueva clase. El
+polimorfismo también ayuda a crear código más genérico.
+• Fácil de mantener. Para corregir un problema, nos limitamos a corregirlo en un único lugar.
